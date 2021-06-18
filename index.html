@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Inteligentes</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/aos.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <img src="/assets/img/logo.svg" alt="Logotipo"> Sistemas Inteligentes
+            </div>
+            <ul id="menu">
+                <li class="brand">
+                    <img src="/assets/img/logo.svg" alt="Logotipo">
+                    Sistemas Inteligentes
+                </li>
+                <li><a class="menu-button" href="#home" ><img src="/assets/img/icons/home.svg" alt="Ícone Casa">Início</a></li>
+                <li><a class="menu-button" href="#services"><img src="/assets/img/icons/cog.svg" alt="Ícone Engrenagem">Serviços</a></li>
+                <li><a class="menu-button" href="#"><img src="/assets/img/icons/alert.svg" alt="Ícone Alerta">Sobre</a></li>
+                <li><a class="menu-button" href="#"><img src="/assets/img/icons/account.svg" alt="Icon">Contato</a></li>
+                <li><button id="menu-close"><img src="/assets/img/icons/close.svg" alt="Ícone Fechar"></button></li>
+            </ul>
+            <button id="menu-icon">
+                <img src="/assets/img/icons/menu.svg" alt="Ícone de Menu" />
+            </button>
+        </div>
+    </header>
+    <section id="home">
+        <video poster="/assets/img/poster.png" id="video-bg" autoplay muted loop>
+            <source src="/assets/videos/bg.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <p data-aos-delay="100" data-aos="zoom-in">As melhores <span>soluções</span><br/>
+                para <span>você</span> e seu <span>negócio</span>
+            </p>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <div class="col" data-aos="fade-right">
+                <h2>Criação de Sites</h2>
+                <img src="/assets/img/sections/web.svg" alt="Imagem Criação de Sites">
+                <p>Você e seu negócio são encontrados facilmente na internet</p>
+                <button class="primary-button">Veja Mais</button>
+            </div>
+            <div class="col" data-aos="zoom-in">
+                <h2>Sistemas Desktop</h2>
+                <img src="/assets/img/sections/desktop.svg" alt="Imagem Criação de Sites">
+                <p>Você e seu negócio são encontrados facilmente na internet</p>
+                <button class="primary-button">Veja Mais</button>
+            </div>
+            <div class="col" data-aos="fade-left">
+                <h2>Aplicativos Mobile</h2>
+                <img src="/assets/img/sections/android.svg" alt="Imagem Criação de Sites">
+                <p>Você e seu negócio são encontrados facilmente na internet</p>
+                <button class="primary-button">Veja Mais</button>
+            </div>
+        </div>
+    </section>
+    <section id="web">
+        
+    </section>
+    <footer>
+
+    </footer>
+
+<script src="/assets/js/menu.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script>AOS.init({easing: 'ease-in-out',duration: 1000, once: false, offset: 100});</script>
+</body>
+
+</html>
