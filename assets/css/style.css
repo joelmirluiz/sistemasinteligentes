@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
 *{
-    margin: 0;
+    /*margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
 }
 :root{
     --primary-color: #02A4FF;
@@ -13,6 +13,8 @@
     --bg-first: #FAFAFA;
     --bg-second: #F1F1F1;
     --bg-third: #C4C4C4;
+
+    --text-dark: #37474F;
 }
 html,
 body,
@@ -174,9 +176,85 @@ section#services .col p{
     background: var(--primary-color);
     border: none;
     border-radius: 0;
+    text-decoration: none;
 }
 section#web{
     background-color: var(--bg-first);
+}
+section#desktop{
+    background-color: var(--bg-second);
+}
+section#android{
+    background-color: var(--bg-third);
+}
+section#web .container,
+section#desktop .container,
+section#android .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+section#web .content,
+section#desktop .content,
+section#android .content{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+section#web h2,
+section#android h2{
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+section#desktop h2{
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    align-self: flex-end;
+}
+section#web img{
+    width: 100%;
+    max-width: 30%;
+    height: auto;
+}
+section#desktop img {
+    width: 100%;
+    max-width: 25%;
+    height: auto;
+}
+section#android img{
+    width: 100%;
+    max-width: 25%;
+}
+section#web p,
+section#android p{
+    font-size: 32px;
+    font-weight: 300;
+}
+section#desktop p{
+    font-size: 32px;
+    font-weight: 300;
+    text-align: right;
+}
+section#android h2,
+section#android p{
+    color: var(--background-primary);
+}
+.icon-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-section img{
+    width: 64px !important;
+    height: 64px !important;
 }
 @media (max-width: 875px) {
     header .container > .brand{
