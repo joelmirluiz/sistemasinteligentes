@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
-*{
-    /*margin: 0;
-    padding: 0;
-    box-sizing: border-box;*/
-}
 :root{
     --primary-color: #02A4FF;
     --secondary-color: #979797;
@@ -13,8 +8,13 @@
     --bg-first: #FAFAFA;
     --bg-second: #F1F1F1;
     --bg-third: #C4C4C4;
-
     --text-dark: #37474F;
+    --border-input: #DADADA;
+    --background-input: #35B6FF;
+    --background-footer: #006ead;
+}
+*{
+    box-sizing: border-box;
 }
 html,
 body,
@@ -114,6 +114,7 @@ header{
 section{
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 section#home{
     display: flex;
@@ -167,6 +168,9 @@ section#services .col p{
     text-align: center;
     padding: 20px 0 10px 0;
 }
+section#about{
+    background: linear-gradient(180deg, #EAEAEA 0%, #E6E6E6 100%);
+}
 .primary-button{
     cursor: pointer;
     padding: 10px;
@@ -174,6 +178,17 @@ section#services .col p{
     font-size: 32px;
     font-weight: 400;
     background: var(--primary-color);
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+}
+.inverse-button{
+    cursor: pointer;
+    padding: 10px;
+    color: var(--primary-color);
+    font-size: 28px;
+    font-weight: 400;
+    background: var(--background-primary);
     border: none;
     border-radius: 0;
     text-decoration: none;
@@ -187,9 +202,14 @@ section#desktop{
 section#android{
     background-color: var(--bg-third);
 }
+section#contact{
+    background-color: var(--primary-color);
+}
 section#web .container,
 section#desktop .container,
-section#android .container{
+section#android .container,
+section#about .container,
+section#contact .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,15 +217,21 @@ section#android .container{
 }
 section#web .content,
 section#desktop .content,
-section#android .content{
+section#android .content,
+section#about .content,
+section#contact .content{
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
+section#contact .content{
+    width: 100%;
+}
 section#web h2,
-section#android h2{
+section#android h2,
+section#contact h2{
     font-size: 56px;
     font-weight: 400;
     text-transform: uppercase;
@@ -216,6 +242,13 @@ section#desktop h2{
     font-weight: 400;
     text-transform: uppercase;
     align-self: flex-end;
+}
+section#about h2{
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    align-self: flex-end;
+    color: var(--text-dark);
 }
 section#web img{
     width: 100%;
@@ -231,19 +264,82 @@ section#android img{
     width: 100%;
     max-width: 25%;
 }
+section#about img{
+    width: 100%;
+    max-width: 25%;
+    height: auto;
+}
 section#web p,
 section#android p{
     font-size: 32px;
     font-weight: 300;
 }
-section#desktop p{
+section#desktop p,
+section#about p{
     font-size: 32px;
     font-weight: 300;
     text-align: right;
 }
+section#about p{
+    color: var(--text-dark);
+}
 section#android h2,
-section#android p{
+section#android p,
+section#contact h2,
+section#contact p{
     color: var(--background-primary);
+}
+section#about .primary-button{
+    align-self: flex-end;
+}
+section#contact ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+section#contact ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--background-primary);
+}
+section#contact .block{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+form{
+    padding: 15px;
+    flex: 0 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+form .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.input-group label{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--background-primary);
+}
+.input-group input,
+.input-group textarea{
+    font-size: 28px;
+    background-color: var(--background-input);
+    border: 1px solid var(--border-input);
+    outline: none;
 }
 .icon-section{
     width: 100%;
@@ -255,6 +351,23 @@ section#android p{
 .icon-section img{
     width: 64px !important;
     height: 64px !important;
+}
+.icon-section img:hover svg{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+footer{
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--background-footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    color: var(--background-primary);
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
 }
 @media (max-width: 875px) {
     header .container > .brand{
@@ -334,10 +447,35 @@ section#android p{
     section#services .container{
         flex-direction: column;
     }
-    section#services .container col{
+    .container .col{
+        height: 100vh;
         margin-bottom: 40px;
     }
     section#services{
         height: auto;
+    }
+    .container h2{
+        font-size: 32px !important;
+    }
+    #web .container h2,
+    #desktop .container h2,
+    #android .container h2{
+        padding: 0 10px;
+        align-self: flex-start !important;
+    }
+    .container p{
+        font-size: 24px !important;
+    }
+    #web .container p,
+    #desktop .container p,
+    #android .container p{
+        padding: 0 10px;
+        text-align: left;
+    }
+    header .container{
+        padding: 0 10px;
+    }
+    section:not(#contact) .content img{
+        display: none;
     }
 }
