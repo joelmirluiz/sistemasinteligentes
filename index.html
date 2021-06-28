@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/reset.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/aos.css" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdD7GEbAAAAAGInPbIFeqdGVs4F3nBZMAXQ3Qmu"></script>
 </head>
 
 <body>
@@ -167,23 +168,24 @@
                         <li><a href="" target="_blank"><img src="/assets/img/icons/instagram.svg" alt="Ícone Instagram"> instagram.com/</a></li>
                     </ul>
                 </div>
-                <form>
+                <form action="https://formcarry.com/s/IUOWWRT_88A" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
                     <div class="input-group">
                         <label for="">Nome</label>
-                        <input type="text" />
+                        <input type="text" name="name"/>
                     </div>
                     <div class="input-group">
                         <label for="">Email</label>
-                        <input type="text" />
+                        <input type="text" name="email"/>
                     </div>
                     <div class="input-group">
                         <label for="">Telefone</label>
-                        <input type="text" />
+                        <input type="text" name="phone"/>
                     </div>
                     <div class="input-group">
                         <label for="">Mensagem</label>
-                        <textarea></textarea>
+                        <textarea name="message"></textarea>
                     </div>
+                    <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
                     <button class="inverse-button">Enviar Mensagem</button>
                 </form>
             </div>
@@ -206,7 +208,14 @@
             "max-glare": 1,
             "glare-prerender":false,
 	    });
-        
+    </script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LdD7GEbAAAAAGInPbIFeqdGVs4F3nBZMAXQ3Qmu', {action: 'homepage'})
+            .then(function(token) {
+                document.getElementById('captchaResponse').value = token;
+            });
+        });
     </script>
 </body>
 
