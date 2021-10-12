@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "nse-iconfont";
+  src: url("fonts/nse-iconfont.eot?ofl2r");
+  src: url("fonts/nse-iconfont.eot?ofl2r#iefix") format("embedded-opentype"), url("fonts/nse-iconfont.ttf?ofl2r") format("truetype"), url("fonts/nse-iconfont.woff?ofl2r") format("woff"), url("fonts/nse-iconfont.svg?ofl2r#nse-iconfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "nse-iconfont" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "";
+  color: #565e64;
+}
+
+.icon-menu:before {
+  content: "";
+  color: #565e64;
+}
+
+.icon-pic-rounded:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-south-america:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-uruguay-mono:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-flag-spain .path1:before {
+  content: "";
+  color: #c60a1d;
+}
+
+.icon-flag-spain .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ffc400;
+}
+
+.icon-flag-spain .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #ea596e;
+}
+
+.icon-flag-spain .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #f4a2b2;
+}
+
+.icon-flag-spain .path5:before {
+  content: "";
+  margin-left: -1em;
+  color: #dd2e44;
+}
+
+.icon-flag-spain .path6:before {
+  content: "";
+  margin-left: -1em;
+  color: #ea596e;
+}
+
+.icon-flag-spain .path7:before {
+  content: "";
+  margin-left: -1em;
+  color: #ffac33;
+}
+
+.icon-flag-spain .path8:before {
+  content: "";
+  margin-left: -1em;
+  color: #99aab5;
+}
+
+.icon-flag-spain .path9:before {
+  content: "";
+  margin-left: -1em;
+  color: #66757f;
+}
+
+.icon-flag-brazil .path1:before {
+  content: "";
+  color: #009b3a;
+}
+
+.icon-flag-brazil .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #fedf01;
+}
+
+.icon-flag-brazil .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #002776;
+}
+
+.icon-flag-brazil .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #cbe9d4;
+}
+
+.icon-flag-brazil .path5:before {
+  content: "";
+  margin-left: -1em;
+  color: #88c9f9;
+}
+
+.icon-flag-brazil .path6:before {
+  content: "";
+  margin-left: -1em;
+  color: #55acee;
+}
+
+.icon-flag-brazil .path7:before {
+  content: "";
+  margin-left: -1em;
+  color: #3b88c3;
+}
+
+.icon-instagram:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-facebook:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-whatsapp:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-envelope:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-results:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-ranking:before {
+  content: "";
+  color: #fff;
+}
+
+.icon-records:before {
+  content: "";
+  color: #fff;
+}
